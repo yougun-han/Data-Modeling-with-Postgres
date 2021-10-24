@@ -18,6 +18,9 @@ The goal of the project is to design data warehouse for a fictitous music stream
 ### File Description <a name="FileDescription"></a>
 <pre>
 - Data-Modeling-with-Postgres
-|-sql_queries.py    # It ontains sql queries, and is imported by "create_tables.py" and "etl.py"
-|-etl.ipynb         # development and test file for "create_tables.py" and "etl.py"
+|- sql_queries.py   # It ontains sql queries, and is imported by "create_tables.py" and "etl.py"
+|- etl.ipynb        # development and test file for "create_tables.py" and "etl.py"
+|- data
+|   |- log_data     # It contains users log data
+|   |- song_data    # It contains song data
 </pre>
