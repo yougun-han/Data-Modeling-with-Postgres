@@ -2,7 +2,11 @@
 
 ## Table of Contents
 1. [Description](#Description)
-2. [Schema Design](#schemadesign)
+    1. [Introduction](#Introduction)
+    2. [Raw Dat](#RawData)
+2. [Schema Design](#SchemaDesign)
+    1. [Fact Table](#FactTable)
+    2. [Dimension Table](#DimensionTable)
 3. [Getting Started](#gettingstarted)
     1. [Software and Libraries](#libraries)
     2. [File Description](#FileDescription)
@@ -16,16 +20,29 @@ This project is completed as a part of Udacity Data Engineering Nanodegree Progr
 
 The goal of the project is to design data warehouse for a fictitous music stream company, Sparkify and implement it in a Postgres (local) SQL server. 
 
+### Introduction <a name="Introduction"></a>
+A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app and provide a personalised experience to the users. One of the examples would be building a music recommendation system based on user's preference like a favourite genre and/or artist. This will increase the quality of user experience and potentially reduce the churn rate. Additionally understanding the general trend of the music industry would be beneficial to the company in a way that the app service can provide the users additional recommendation according to the up-to-date music trend.   
+
+User's music preference information can be manually specified by users in their account. However, users may not provide their specific musical taste and furthermore, this information can be easily outdated. People move on and change their style and fondness and won't bother to update this information in their account. Also, it is not easy for the company to manually catch up on what is happening in the music industry. The better approach would be to figure out what users want and what is hot based on the user's behaviour. What users listen tells what users want and trend. For this purpose, 
+
+Sparkify has been collecting on songs and user activity in their music streaming app, but currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. Sparkfiy needs to develop a database that is optimised for the user's song play analysis. The new database should provide analyst easy access to summary data with simple querries. For example, song play summary data by users, songs, artist, and play time should be easy to query. With such a database, Sparkify can find what songs are popular, who is the hottest singers now, who is listening to what, when, and where.
+
+As a data engineer, I created a database schema and ETL pipeline to optimize queries on song play analysis. 
+
+### Raw Data <a name="RawData"></a>
 
 
-## Schema design and ETL pipeline  <a name="Description"></a>
+
+
+
+## Schema Design <a name="SchemaDesign"></a>
 The new database is designed such that song play data can be easily analysed by song, user, artist, and time. One fact table and four dimension tables are designed as detailed below:
 
-### Fact Table
+### Fact Table <a name="FactTable"></a>
  - songplays - records in log data associated with song plays i.e. records with page NextSong
     * Columns : songplay_id (Primary Key), start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-### Dimension Tables
+### Dimension Tables <a name="DimensionTable"></a>
  - users - users in the app
     * Columns : user_id (Primary Key), first_name, last_name, gender, level
  - songs - songs in music database
