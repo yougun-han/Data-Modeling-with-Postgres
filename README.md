@@ -5,8 +5,9 @@
     1. [Introduction](#Introduction)
     2. [Raw Data](#RawData)
 2. [Schema Design](#SchemaDesign)
-    1. [Fact Table](#FactTable)
-    2. [Dimension Table](#DimensionTable)
+    1. [Entity Relationship Diagram](#ERD)
+    2. [Fact Table](#FactTable)
+    3. [Dimension Table](#DimensionTable)
 3. [Getting Started](#gettingstarted)
     1. [Software and Libraries](#libraries)
     2. [File Description](#FileDescription)
@@ -60,8 +61,11 @@ If you would like to look at the JSON data within log_data files, you will need 
 df = pd.read_json(filepath, lines=True)
 ```
 
-## Schema Design <a name="SchemaDesign"></a>
+## Schema Design <a name="ERD"></a>
 The new database is designed such that song play data can be easily analysed by song, user, artist, and time. One fact table and four dimension tables are designed as detailed below:
+
+### Entity Relationship Diagram <a name="FactTable"></a>
+![ERD](Images_For_README/ERD.png)
 
 ### Fact Table <a name="FactTable"></a>
  - songplays - records in log data associated with song plays i.e. records with page NextSong
