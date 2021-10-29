@@ -61,10 +61,10 @@ If you would like to look at the JSON data within log_data files, you will need 
 df = pd.read_json(filepath, lines=True)
 ```
 
-## Schema Design <a name="ERD"></a>
+## Schema Design <a name="SchemaDesign"></a>
 The new database is designed such that song play data can be easily analysed by song, user, artist, and time. One fact table and four dimension tables are designed as detailed below:
 
-### Entity Relationship Diagram <a name="FactTable"></a>
+### Entity Relationship Diagram <a name="ERD"></a>
 ![ERD](Images_For_README/ERD.png)
 
 ### Fact Table <a name="FactTable"></a>
