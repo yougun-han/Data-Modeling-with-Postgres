@@ -90,6 +90,8 @@ Data for songs and artists tables are extracted from song dataset. Data for time
 <pre>
 - Data-Modeling-with-Postgres
 |- sql_queries.py   # It ontains sql queries, and is imported by "create_tables.py" and "etl.py"
+|- create_tables.py # It drops and creates tables in the database. 
+|- etl.py           # It reads and processes song and log data and loads output data into the database.
 |- etl.ipynb        # development and test file for "create_tables.py" and "etl.py"
 |- test.ipynb       # development test file. It can be used for testing while developing etl.ipynb 
 |- data
@@ -98,9 +100,7 @@ Data for songs and artists tables are extracted from song dataset. Data for time
 </pre>
 
 ### Run Program <a name="RunProgram"></a>
-1. Run a local postgres sql server.
-1. Fill up the sql credential information in sql_credential.cfg.
-2. Copy song json files into .../data/song_data/
-3. Copy log json files into .../data/log_data/
-5. Run create_tables.py
-6. Run etl.py
+1. Run a local postgres sql server and create a new database for the project.
+2. Fill up the sql credential information in sql_credential.cfg.
+3. Run create_tables.py
+4. Run etl.py
