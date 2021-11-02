@@ -12,9 +12,9 @@
     1. [Software and Libraries](#libraries)
     2. [File Description](#FileDescription)
     3. [Run Program](#RunProgram)
-3. [Output(WebApp)](#Output)
-4. [Author](#Author)
-5. [Acknowledgements](#Acknowledgements)
+4. [Output](#Output)
+5. [Author](#Author)
+6. [Acknowledgements](#Acknowledgements)
 
 ## Description <a name="Description"></a>
 This project is completed as a part of [Udacity](https://www.udacity.com/) Data Engineering Nanodegree Program.
@@ -107,3 +107,23 @@ Data for songs and artists tables are extracted from song dataset. Data for time
 2. Fill up the sql credential information in sql_credential.cfg.
 3. Run create_tables.py
 4. Run etl.py
+
+
+## Output <a  name="Output"></a>
+Five tables were created in the database after running the program. Below shows the first five rows for each table. Given that a fraction of entire dataset was given, songplays table has null values for most of song_id and artist_id columns
+### artists ###
+![artists](Images_For_README/table_artists.png)
+### songs ###
+![songs](Images_For_README/table_songs.png)
+### time ###
+![time](Images_For_README/table_time.png)
+### users ###
+![users](Images_For_README/table_users.png)
+### songplays ###
+![songplays](Images_For_README/table_songplays.png)
+
+## Author <a  name="Author"></a>
+Yougun Han
+
+## Acknowledgements <a  name="Acknowledgements"></a>
+I would like to thank Udacity for designing the project.
